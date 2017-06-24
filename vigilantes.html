@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			div.gallery {
+			    margin: 5px;
+			    border: 1px solid #ccc;
+			    width: 300px;
+			    display: inline-block;
+			    vertical-align: top;
+			}
+
+			div.gallery:hover {
+			    border: 1px solid #777;
+			}
+
+			div.gallery img {
+			    width: 100%;
+			    height: auto;
+			}
+
+			div.desc {
+			    padding: 15px;
+			    text-align: center;
+			    color: #8B4513
+			}
+			button {
+				background-color: black;
+				border: solid 2px #8B4513;
+				color: #8B4513;
+				border-radius: 25px;
+				margin-top: 0.5em
+			}
+			.hidden {
+				color: #8B4513;
+				width: 50em;
+				text-align: center;
+				vertical-align: top;
+				border: 1px solid #8B4513;
+				height: 200px;
+				padding: 3px;
+				margin-top: 1em;
+			}
+			#share-buttons img {
+				width: 35px;
+				padding: 5px;
+				border: 0;
+				box-shadow: 0;
+			}
+			#share-buttons a {
+				display: inline-block;
+			}
+		</style>
+		<meta charset="UTF-8">
+	</head>
+	<body style="background-color: black">
+		<script>
+			function showAbout() {
+				if (document.getElementById('about').style.display == 'none'){
+					document.getElementById('about').style.display = 'inline-block'
+					document.getElementById('history').style.display = 'none'
+					document.getElementById('contact').style.display = 'none'
+					document.getElementById('images').style.display = 'none'
+				}
+			}
+			function showHistory() {
+				if (document.getElementById('history').style.display == 'none'){
+					document.getElementById('history').style.display = 'inline-block'
+					document.getElementById('contact').style.display = 'none'
+					document.getElementById('about').style.display = 'none'
+					document.getElementById('images').style.display = 'none'
+				}
+			}
+			function showContact() {
+				if (document.getElementById('contact').style.display == 'none'){
+					document.getElementById('contact').style.display = 'inline-block'
+					document.getElementById('history').style.display = 'none'
+					document.getElementById('about').style.display = 'none'
+					document.getElementById('images').style.display = 'none'
+				}
+			}
+			function showImages() {
+				if (document.getElementById('images').style.display == 'none'){
+					document.getElementById('images').style.display = 'inline-block'
+					document.getElementById('history').style.display = 'none'
+					document.getElementById('about').style.display = 'none'
+					document.getElementById('contact').style.display = 'none'
+				}
+			}
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery-ui.min.js"></script>
+		<div id="share-buttons" style="float:left;width: 95px">
+		    <!-- Youtube -->
+		    <a href="https://youtube.com/channel/UCFqobq1l0JjKCh65htiAWVg" target="_blank" style="text-decoration: none">
+		        <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/youtube_circle-512.png" alt="Youtube" />
+		    </a>
+		      
+		    <!-- Reddit -->
+		    <a href="https://reddit.com/u/iVigilantes" title="Simple Share Buttons" target="_blank" style="text-decoration: none">
+		        <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+		    </a>
+		    
+		    <!-- Twitter -->
+		    <a href="https://twitter.com/VigilantesWilds" target="_blank" style="text-decoration: none">
+		        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+		    </a>
+
+		    <!-- Wilds -->
+		    <a href="https://wilds.io" target="_blank" style="text-decoration: none">
+		        <img src="https://cdn.discordapp.com/attachments/324578076157542402/327909900418285568/favicon.ico" alt="Wilds" />
+		    </a>
+
+		    <!-- Userecho -->
+		    <a href="https://wilds.userecho.com/users/3470-vigilante-gaming/topics/" target="_blank" style="text-decoration: none">
+		    	<img src="https://cdn.discordapp.com/attachments/324578076157542402/327917092412325898/userecho_burned.png" alt="Wilds Userecho">
+		    </a>
+
+		    <!-- Soundcloud -->
+		    <a href="https://soundcloud.com/vigilante_gaming" target="_blank">
+		    	<img src="http://www.myiconfinder.com/uploads/iconsets/256-256-9550d3f08a15ca1777c5deb465b95be6-soundcloud.png" alt="Soundcloud">
+		    </a>
+		</div>
+		<div style="background-color: black; border: solid #8B4513 3px; border-radius: 25px;color:#8B4513; text-align: center;width: 50em; margin: 0 auto"><h1>The Vigilantes</h1></div>
+		<div style="width:100%;height:100px;margin:0 auto;text-align: center">
+			<button type="button" onclick="showAbout()">About</button>
+			<button type="button" onclick="showHistory()">Guild History</button>
+			<button type="button" onclick="showContact()">Contact the Vigilantes</button>
+			<button type="button" onclick="showImages()">Image Gallery</button>
+		</div>
+		<div style="width: 100%;margin: 0 auto;text-align: center">
+			<div id='about' class='hidden' style="display: none;">
+				<h1>About the Vigilantes</h1>
+				<p>The Vigilante Gaming Guild is much more than a so-called, 'guild.' Our members are dedicated to doing their best, for themselves and the community. We recruit only elite members, based not just on skill but on their potential to change Wilds.io for the better. This is our 'guild' way, we will stay strong and never back down." — The Vigilante Founders</p>
+			</div>
+			<div id='history' class='hidden' style="display: none;">
+				<h1>Guild History</h1>
+				<p>(pending, copy/paste history here when you recieve it)</p>
+			</div>
+			<div id="contact" class="hidden" style="display: none;">
+				<h1>Contact</h1>
+				<p>The best way to get in contact with the Vigilantes is to ping (@mention) Saii in the <a href="https://discordapp.com/invite/vWFBQa3">Wilds discord channel</a></p>
+			</div>
+		</div>
+		<div id="images" class="hidden" style="height: 200px;display: none;border: none;margin: 0 auto;width: 100%;">
+			<div class="gallery">
+				<a target="_blank" href="https://pbs.twimg.com/media/DBA63jSXgAEIBlm.jpg">
+					<img src="https://pbs.twimg.com/media/DBA63jSXgAEIBlm.jpg" alt="Vigilante members" width="300" height="200">
+				</a>
+				<div class="desc">Some vigilante members in-game with Rezoner, the creator of the game.</div>
+			</div>
+			<div class='gallery'>
+				<a target="_blank" href="https://pbs.twimg.com/media/C_5Yl17UQAAUENy.jpg">
+					<img src="https://pbs.twimg.com/media/C_5Yl17UQAAUENy.jpg" alt="Lots of items" width="300" height="200">
+				</a>
+				<div class="desc">A whole lot of items amassed in practice mode</div>
+			</div>
+			<div class="gallery">
+				<a target="_blank" href="https://pbs.twimg.com/media/C_3PJblW0AAmy6V.jpg">
+					<img src="https://pbs.twimg.com/media/C_3PJblW0AAmy6V.jpg" alt="Ogres" width="300" height="200">
+				</a>
+				<div class="desc">A prototype of the Ogres</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
